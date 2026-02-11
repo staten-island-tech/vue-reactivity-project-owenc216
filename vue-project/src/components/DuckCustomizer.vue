@@ -4,8 +4,14 @@ const emit = defineEmits(['start'])
 
 const hats = [
   { name: 'None', img: '' },
-  { name: 'Top Hat', img: 'https://i.imgur.com/1Q9Z1ZL.png' },
-  { name: 'Crown', img: 'https://i.imgur.com/9R3vN2M.png' },
+  {
+    name: 'Top Hat',
+    img: 'https://png.pngtree.com/element_our/20190529/ourmid/pngtree-a-black-top-hat-illustration-image_1214580.jpg',
+  },
+  {
+    name: 'Crown',
+    img: 'https://clipart-library.com/clip-art/cartoon-crown-transparent-background-15.htm',
+  },
 ]
 
 const shirts = [

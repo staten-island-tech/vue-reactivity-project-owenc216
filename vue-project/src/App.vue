@@ -1,11 +1,11 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import DuckCustomizer from '@/components/DuckCustomizer.vue'
+import DuckRace from '@/components/DuckRace.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <h1>Race Sum Ducks</h1>
 </template>
 
 <style scoped></style>
