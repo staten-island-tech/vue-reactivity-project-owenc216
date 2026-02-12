@@ -21,8 +21,8 @@ const emit = defineEmits(['start'])
 
 function startRace() {
   emit('start', [
-    { ...player1.value, pos: 0 },
-    { ...player2.value, pos: 0 },
+    { name: player1.value.name, img: player1.value.img, pos: 0 },
+    { name: player2.value.name, img: player2.value.img, pos: 0 },
   ])
 }
 </script>

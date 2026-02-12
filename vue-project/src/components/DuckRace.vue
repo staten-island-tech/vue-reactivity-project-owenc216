@@ -28,14 +28,15 @@ onMounted(() => {
 
 <template>
   <div class="race">
-    <h2>Player 1: W key Player 2: ↑ key</h2>
+    <h2>Player 1: W | Player 2: ↑</h2>
 
     <div class="racetrack">
-      <div v-for="p in players" :key="p.name" class="race__duck" :style="{ left: p.pos + 'px' }">
-        {{ p.emoji }} {{ p.name }}
+      <div v-for="p in players" :key="p.name" class="raceduck" :style="{ left: p.pos + 'px' }">
+        <img :src="p.img" class="raceimg" />
+        <p>{{ p.name }}</p>
       </div>
 
-      <div class="race__finish">🏁</div>
+      <div class="racefinish">🏁</div>
     </div>
 
     <h1 v-if="winner">{{ winner }} Wins!</h1>
@@ -43,22 +44,21 @@ onMounted(() => {
 </template>
 
 <style>
-.race__track {
+.racetrack {
   position: relative;
-  width: 600px;
-  height: 150px;
+  width: 700px;
+  height: 200px;
   border: 3px solid black;
   margin: auto;
+  overflow: hidden;
 }
 
-.race__duck {
+.raceduck {
   position: absolute;
-  font-size: 40px;
+  top: 50px;
 }
 
-.race__finish {
-  position: absolute;
-  right: 0;
-  font-size: 40px;
+.raceimg {
+  width: 80px;
 }
 </style>
