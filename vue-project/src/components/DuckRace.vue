@@ -1,73 +1,64 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
-const props = defineProps(['players'])
-const finishLine = 600
+const props = defineProps({
+  players: Array,
+})
 
-function moveDuck(player) {
-  player.position += 10
-  if (player.position >= finishLine) {
-    alert(player.name + ' WINS!')
-    window.location.reload()
+const finishLine = 500
+const winner = ref(null)
+
+function movePlayer(index) {
+  if (!winner.value) {
+    props.players[index].pos += 15
+
+    if (props.players[index].pos >= finishLine) {
+      winner.value = props.players[index].name
+    }
   }
 }
 
 onMounted(() => {
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'w') moveDuck(props.players[0])
-    if (e.key === 'ArrowUp') moveDuck(props.players[1])
+    if (e.key === 'w') movePlayer(0)
+    if (e.key === 'ArrowUp') movePlayer(1)
   })
 })
 </script>
 
 <template>
   <div class="race">
-    <div class="race__track">
-      <div
-        v-for="(player, index) in players"
-        :key="index"
-        class="race__duck"
-        :style="{ left: player.position + 'px', top: index * 120 + 'px' }"
-      >
-        <img src="/src/assets/duck.png" class="race__duck-base" />
+    <h2>Player 1: W key | Player 2: ↑ key</h2>
 
-        <img v-if="player.hat" :src="player.hat" class="race__duck-hat" />
-        <img v-if="player.shirt" :src="player.shirt" class="race__duck-shirt" />
+    <div class="race__track">
+      <div v-for="p in players" :key="p.name" class="race__duck" :style="{ left: p.pos + 'px' }">
+        {{ p.emoji }} {{ p.name }}
       </div>
+
+      <div class="race__finish">🏁</div>
     </div>
 
-    <p>Player 1: Press W | Player 2: Press ↑</p>
+    <h1 v-if="winner">{{ winner }} Wins!</h1>
   </div>
 </template>
 
 <style>
 .race__track {
   position: relative;
-  width: 700px;
-  height: 300px;
+  width: 600px;
+  height: 150px;
   border: 3px solid black;
   margin: auto;
 }
 
 .race__duck {
   position: absolute;
+  font-size: 40px;
 }
 
-.race__duck-base {
-  width: 100px;
-}
-
-.race__duck-hat {
+.race__finish {
   position: absolute;
-  top: -40px;
-  left: 20px;
-  width: 50px;
-}
-
-.race__duck-shirt {
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  width: 60px;
+  right: 0;
+  font-size: 40px;
 }
 </style>
