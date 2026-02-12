@@ -5,7 +5,7 @@ import DuckRace from '@/components/DuckRace.vue'
 </script>
 
 <template>
-  <h1>Race Sum Ducks</h1>
+  <h1>Race Sum Ducks And Sum Other Things</h1>
 </template>
 
 <style scoped></style>

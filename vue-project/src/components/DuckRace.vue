@@ -28,9 +28,9 @@ onMounted(() => {
 
 <template>
   <div class="race">
-    <h2>Player 1: W key | Player 2: ↑ key</h2>
+    <h2>Player 1: W key Player 2: ↑ key</h2>
 
-    <div class="race__track">
+    <div class="racetrack">
       <div v-for="p in players" :key="p.name" class="race__duck" :style="{ left: p.pos + 'px' }">
         {{ p.emoji }} {{ p.name }}
       </div>
