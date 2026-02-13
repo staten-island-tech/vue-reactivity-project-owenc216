@@ -5,7 +5,7 @@ const props = defineProps({
   players: Array,
 })
 
-const finishLine = 500
+const finishLine = 1700
 const winner = ref(null)
 
 function movePlayer(index) {
@@ -35,8 +35,6 @@ onMounted(() => {
         <img :src="p.img" class="raceimg" />
         <p>{{ p.name }}</p>
       </div>
-
-      <div class="racefinish">🏁</div>
     </div>
 
     <h1 v-if="winner">{{ winner }} Wins!</h1>
@@ -46,7 +44,7 @@ onMounted(() => {
 <style>
 .racetrack {
   position: relative;
-  width: 700px;
+  width: 1800px;
   height: 200px;
   border: 3px solid black;
   margin: auto;

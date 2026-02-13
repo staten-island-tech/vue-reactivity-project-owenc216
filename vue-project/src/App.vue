@@ -2,10 +2,30 @@
 import { ref } from 'vue'
 import DuckCustomizer from '@/components/DuckCustomizer.vue'
 import DuckRace from '@/components/DuckRace.vue'
+const players = ref([])
+const gameStarted = ref(false)
+
+function startGame(selectedPlayers) {
+  players.value = selectedPlayers
+  gameStarted.value = true
+}
 </script>
 
 <template>
-  <h1>Race Sum Ducks And Sum Other Things</h1>
+  <h1 class="title">Race Sum Ducks And Sum Other Things</h1>
+  <h2 class="subtitle">No Harm Or Insult Intended</h2>
+  <DuckCustomizer v-if="!gameStarted" @start="startGame" />
+  <DuckRace v-if="gameStarted" :players="players" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+</style>

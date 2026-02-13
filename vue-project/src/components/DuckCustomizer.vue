@@ -9,8 +9,32 @@ const animals = [
   { name: 'Duck', img: 'https://toppng.com/uploads/preview/donald-duck-11530971314bhzhdbacdf.png' },
   { name: 'Cat', img: 'https://toppng.com/uploads/preview/cat-11521380842tgtbawala1.png' },
   {
+    name: 'Take The L',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIKY68vtl6pAkrTjAY5CNJJ24cU2O9RvpplA&s',
+  },
+  {
     name: 'Horse',
     img: 'https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvZnJob3JzZV9nYWxsb3BfY2FudGVyX21hcmUtaW1hZ2Utcm01MDMtbDBqOXJmcmgucG5n.png',
+  },
+  {
+    name: 'Big K',
+    img: 'https://www.bing.com/th/id/OIP.cURo0O6EdgeaAscRcaGPrQHaE7?w=528&h=424&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2',
+  },
+  {
+    name: '🎈',
+    img: 'https://www.bing.com/th/id/OIP.J-Ry_Zy0youFgajSVw_PnwHaLM?w=280&h=424&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2',
+  },
+  {
+    name: 'Long ahh name',
+    img: 'https://th.bing.com/th/id/OIP.vn4C38WdgmeBByHVMt11AwHaEK?w=313&h=180&c=7&r=0&o=7&pid=1.7&rm=3',
+  },
+  {
+    name: 'Big Yahu',
+    img: 'https://www.bing.com/th/id/OIP.KebufPBrpQDLSEytoSIOuQHaEP?w=528&h=398&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2',
+  },
+  {
+    name: '🍊',
+    img: 'https://th.bing.com/th/id/OIP.ZplPf4k1oY_t6f8pXJkq7AHaEK?w=301&h=180&c=7&r=0&o=7&pid=1.7&rm=3',
   },
 ]
 
