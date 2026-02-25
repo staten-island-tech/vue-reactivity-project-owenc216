@@ -36,6 +36,14 @@ const animals = [
     name: '🍊',
     img: 'https://th.bing.com/th/id/OIP.ZplPf4k1oY_t6f8pXJkq7AHaEK?w=301&h=180&c=7&r=0&o=7&pid=1.7&rm=3',
   },
+  {
+    name: 'que paso?',
+    img: 'https://thumbs.dreamstime.com/b/naked-mexican-man-isolated-white-68340492.jpg?w=768',
+  },
+  {
+    name: 'WHY DED U REEEDEEM DA GIRFGARD',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Kdu7OKRTHmnw2Qto6t14OXPBdTZBLYm6YA&s',
+  },
 ]
 
 const player1 = ref(animals[0])

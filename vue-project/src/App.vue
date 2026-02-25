@@ -22,10 +22,13 @@ function startGame(selectedPlayers) {
 .title {
   text-align: center;
   margin-bottom: 20px;
+  color: darkblue;
 }
 
 .subtitle {
   text-align: center;
   margin-bottom: 40px;
+  font-style: italic;
+  color: blueviolet;
 }
 </style>
