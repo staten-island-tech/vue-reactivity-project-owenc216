@@ -17,6 +17,7 @@ function startGame(selectedPlayers) {
   <h3 class="instructions">w and up arrow key to move</h3>
   <DuckCustomizer v-if="!gameStarted" @start="startGame" />
   <DuckRace v-if="gameStarted" :players="players" />
+  <button @click="gameStarted = false">Play Again</button>
 </template>
 
 <style scoped>
