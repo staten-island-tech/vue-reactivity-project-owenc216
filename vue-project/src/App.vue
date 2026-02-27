@@ -39,4 +39,7 @@ function startGame(selectedPlayers) {
   font-style: italic;
   color: blueviolet;
 }
+.body {
+  background-color: red;
+}
 </style>
