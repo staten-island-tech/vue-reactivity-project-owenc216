@@ -15,7 +15,7 @@ function startGame(selectedPlayers) {
   <h1 class="title">Race Sum Ducks And Sum Other Things</h1>
   <h2 class="subtitle">No Harm Or Insult Intended</h2>
   <h3 class="instructions">w and up arrow key to move</h3>
-  <DuckCustomizer v-if="!gameStarted" @start="startGame" />
+  <DuckCustomizer v-if="!gameStarted" :startGame="startGame" />
   <DuckRace v-if="gameStarted" :players="players" />
   <button @click="gameStarted = false">Play Again</button>
 </template>
