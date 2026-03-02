@@ -48,10 +48,6 @@ const animals = [
 
 const player1 = ref(animals[0])
 const player2 = ref(animals[1])
-/*  const players = ref([])
-const gameStarted = ref(false)
-*/
-
 const props = defineProps({
   startGame: Function,
 })
@@ -62,23 +58,6 @@ function startRace() {
     { name: player2.value.name, img: player2.value.img, pos: 0 },
   ])
 }
-
-/* function startGame() {
-  players.value = [
-    { name: player1.value.name, img: player1.value.img, pos: 0 },
-    { name: player2.value.name, img: player2.value.img, pos: 0 },
-  ]
-  gameStarted.value = true
-} */
-
-/* const emit = defineEmits(['start'])
-
-function startRace() {
-  emit('start', [
-    { name: player1.value.name, img: player1.value.img, pos: 0 },
-    { name: player2.value.name, img: player2.value.img, pos: 0 },
-  ])
-} */
 </script>
 
 <template>
