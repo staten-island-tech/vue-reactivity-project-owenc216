@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 const props = defineProps({
   players: Array,
@@ -24,15 +24,21 @@ onMounted(() => {
     if (e.key === 'ArrowUp') movePlayer(1)
   })
 })
+onUnmounted(() => {
+  window.removeEventListener('keydown', (e) => {
+    if (e.key === 'w') movePlayer(0)
+    if (e.key === 'ArrowUp') movePlayer(1)
+  })
+})
 </script>
 
 <template>
   <div class="race">
     <h2>Player 1: W | Player 2: ↑</h2>
 
-    <div class="racetrack">
-      <div v-for="p in players" :key="p.name" class="raceduck" :style="{ left: p.pos + 'px' }">
-        <img :src="p.img" class="raceimg" />
+    <div class="race-track">
+      <div v-for="p in players" :key="p.name" class="race-duck" :style="{ left: p.pos + 'px' }">
+        <img :src="p.img" class="race-img" />
         <p>{{ p.name }}</p>
       </div>
     </div>
@@ -42,7 +48,7 @@ onMounted(() => {
 </template>
 
 <style>
-.racetrack {
+.race-track {
   position: relative;
   width: 1800px;
   height: 200px;
@@ -51,12 +57,12 @@ onMounted(() => {
   overflow: hidden;
 }
 
-.raceduck {
+.race-duck {
   position: absolute;
   top: 50px;
 }
 
-.raceimg {
+.race-img {
   width: 80px;
 }
 </style>
