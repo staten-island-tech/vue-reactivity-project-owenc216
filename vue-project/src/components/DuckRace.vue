@@ -24,12 +24,6 @@ onMounted(() => {
     if (e.key === 'ArrowUp') movePlayer(1)
   })
 })
-onUnmounted(() => {
-  window.removeEventListener('keydown', (e) => {
-    if (e.key === 'w') movePlayer(0)
-    if (e.key === 'ArrowUp') movePlayer(1)
-  })
-})
 </script>
 
 <template>
