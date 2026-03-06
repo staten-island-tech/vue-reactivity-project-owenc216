@@ -51,7 +51,6 @@ const player2 = ref(animals[1])
 const props = defineProps({
   startGame: Function,
 })
-
 function startRace() {
   props.startGame([
     { name: player1.value.name, img: player1.value.img, pos: 0 },

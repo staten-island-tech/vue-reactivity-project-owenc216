@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const props = defineProps({
   players: Array,
@@ -7,7 +7,6 @@ const props = defineProps({
 
 const finishLine = 1700
 const winner = ref(null)
-
 function movePlayer(index) {
   if (!winner.value) {
     props.players[index].pos += 15
@@ -17,7 +16,6 @@ function movePlayer(index) {
     }
   }
 }
-
 onMounted(() => {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'w') movePlayer(0)
